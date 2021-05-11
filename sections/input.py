@@ -1,13 +1,23 @@
 # import pyautogui
 # import time
-import windows
+from sections import windows
 
 
-def open_inventory(local=True, max_attempts=100):
+def open_inventory_local(max_attempts=100):
     """
-    Opens the inventory provided. If not "local" then remote (using "F" key)
+    Opens the local inventory
     :param max_attempts: (Number) Maximum times to attempt to open inventory
-    :param local: (boolean) open local or remote? (Default=True)
+    :return: (boolean) true on success, false on failed after max_attempts
+    TODO: implement this
+    """
+    # as this is a placeholder, we always return true as if it succeeded
+    return True
+
+
+def open_inventory_remote(max_attempts=100):
+    """
+    Opens the remote inventory
+    :param max_attempts: (Number) Maximum times to attempt to open inventory
     :return: (boolean) true on success, false on failed after max_attempts
     TODO: implement this
     """
@@ -43,3 +53,26 @@ def toggle_command_palette(force_open=0):
     else:
         if windows.is_command_palette_open(returns=True) != force_open:
             return True  # Pretend we opened the palette
+
+
+def open_menu():
+    # Open the esc menu
+    return True
+
+
+def close_menu():
+    # Close the esc menu
+    return True
+
+
+def spawn_at_bed(bed_name="bed"):
+    """
+    Spawns as the provided bed name. If more than one bed exists, one is selected at random
+    :param bed_name: Name of the bed, ensure this is unique!
+    :return: (boolean) success?
+    """
+    # TODO: implement this
+    # type bed name in search field
+    # find bed img on screen (return false if not found)
+    # click bed, click spawn (check if bed is spawn-able? false if not)
+    return True

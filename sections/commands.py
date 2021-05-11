@@ -1,4 +1,4 @@
-import input
+from sections import input
 
 
 def __enter_command(command):
